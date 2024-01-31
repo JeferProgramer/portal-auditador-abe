@@ -1,0 +1,105 @@
+@import "../../Variables/variables";
+
+.advancedFilters {
+  position: relative;
+  width: 190px;
+  height: 30px;
+  padding: 10px;
+  background: #008289;
+  border-radius: 8px;
+  border: 1px #008289 solid;
+  cursor: pointer;
+  right: 30px;
+  top: 30px;
+
+  gap: 10px;
+  display: inline-flex;
+
+  .arrow {
+    width: 20px;
+    height: 20px;
+    padding: 5px 0px;
+  }
+
+  .text {
+    color: white;
+    font-size: 18px;
+    font-family: $font-main;
+    font-weight: 700;
+    word-wrap: break-word;
+    white-space: nowrap;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+  }
+}
+
+.containerCheckHeader {
+  display:flex;
+  border-bottom: 1px solid #ABABAB;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.containerCheckState {
+  display: flex;
+  align-items: center;
+  font-family: $font-main !important;
+}
+
+.containerButtonsFooter {
+  margin-right: 40px;
+  gap: 10px;
+  display: flex;
+  justify-content: center !important;
+}
+
+.statusCircle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.statusCircle.Pending {
+  background-color: yellow;
+}
+
+.statusCircle.InProgress {
+  background-color: orange;
+}
+
+.statusCircle.Delivered {
+  background-color: #15a8fa;
+}
+
+.statusCircle.Approved {
+  background-color: green;
+}
+
+.statusCircle.Overdue {
+  background-color: red;
+}
+
+.advanced-filter-title {
+  margin: 10px 0px;
+  font-weight: bold;
+  color: #36455d;
+  font-family: $font-main;
+}
+
+.closeIconCustomStyle {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  zoom: 1.6;
+  cursor: pointer;
+}
+
+.customCheckbox {
+  width: 20px;
+  height: 20px;
+  border: 1.17px rgba(0, 130, 137, 0.40) solid;
+  position: relative;
+  display: inline-block;
+}

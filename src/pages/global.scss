@@ -1,0 +1,153 @@
+:root {
+  --fc-border-color: #F3F3F3;
+}
+
+body {
+  font-family: "Fuente Geometric" !important;
+  /* Reemplaza 'TuFuente' con el nombre de tu fuente preferida */
+}
+
+input {
+  font-family: "Fuente Geometric" !important;
+  /* También aplica la fuente a todos los inputs */
+}
+
+.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  border-radius: 8px;
+}
+
+.css-tlc64q-MuiPaper-root-MuiDialog-paper {
+  max-width: fit-content;
+}
+
+.css-1ypec4v-MuiButtonBase-root-MuiButton-root {
+  font-family: "Fuente Geometric";
+}
+
+.css-ypiqx9-MuiDialogContent-root {
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5555559b;
+  border-radius: 10px;
+}
+
+.fc .fc-col-header-cell-cushion {
+  text-transform: capitalize;
+}
+
+.secondary-abe-button {
+  text-transform: capitalize;
+  border: 1px solid #a6d04f;
+  color: #9197b3;
+}
+
+.primary-abe-button {
+  text-transform: capitalize;
+  background-color: #008289;
+  color: white;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row !important;
+  font-weight: 700;
+  color: #36455d;
+}
+
+.fc .fc-button-primary:disabled {
+  background-color: #F4F4F5;
+  color: #36455D;
+  border-color: #fff;
+}
+
+.fc .fc-button-primary {
+  color: #36455D;
+  background-color: #F4F4F5;
+  border-color: #fff;
+}
+
+.fc .fc-button-primary:hover {
+  color: #36455D;
+  background-color: #F4F4F5;
+  border-color: #fff;
+}
+
+.fc-daygrid-day:hover .fc-daygrid-day-number {
+  color: #a6d04f;
+}
+
+textarea {
+  border-color: #c7c7c7;
+  border-radius: 4px;
+}
+
+.Requirements_calendar_calendarFirst__03dMB {
+
+  .fc-daygrid-day:not(.fc-day-today):hover .fc-daygrid-day-number {
+    color: #36455D;
+  }
+
+  .fc-theme-standard td,
+  .fc-theme-standard th {
+    border: 1px solid white;
+    height: 10px;
+    cursor: pointer;
+
+  }
+
+  .fc-theme-standard .fc-scrollgrid {
+    border: 1px solid white;
+  }
+
+  .fc .fc-daygrid-day-top {
+    justify-content: center;
+  }
+
+  .fc .fc-button-primary {
+    color: #36455D;
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    min-height: auto;
+    position: relative;
+    top: -7px;
+    padding-left: 0.5vw;
+  }
+
+
+  .fc .fc-daygrid-day.fc-day-today {
+    background-color: #008289;
+    border-radius: 50%;
+    width: 80%;
+    height: 72%;
+    display: flex;
+    justify-content: center;
+
+
+    @media(max-width: 1400px) {
+      width: 100%;
+    }
+  }
+
+  .fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-top {
+    color: #fff !important;
+  }
+
+  .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+}

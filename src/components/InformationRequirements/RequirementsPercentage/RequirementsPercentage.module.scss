@@ -1,0 +1,193 @@
+@import "../../../Variables/variables";
+
+.observationsFieldContainer {
+  width: 98%;
+  height: auto;
+  justify-content: space-between;
+  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 10px;
+
+  > * {
+    flex-basis: content;
+  }
+
+  .observationsFieldItem {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 6px;
+    display: flex;
+  }
+
+  .observationsFieldInnerItem {
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+  }
+
+  .observationsFieldText {
+    color: #36455d;
+    font-size: 18px;
+    font-family: $font-main;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+
+  .observationsFieldSubitem {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1px;
+    display: flex;
+  }
+
+  .observationsFieldSubitemInner {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #c7c7c7;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+  }
+
+  .observationsFieldIconContainer {
+    width: 18px;
+    height: 18px;
+    position: relative;
+  }
+
+  .observationsFieldIcon {
+    width: 13.5px;
+    height: 13.5px;
+    left: 2.25px;
+    top: 2.25px;
+    position: absolute;
+    border: 1.5px solid #c7c7c7;
+  }
+
+  .observationsFieldSubitemInner2 {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #a6d04f;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+  }
+
+  .observationsFieldIcon2 {
+    width: 13.5px;
+    height: 9px;
+    left: 2.25px;
+    top: 4.5px;
+    position: absolute;
+    border: 1.93px solid #a6d04f;
+  }
+
+  .observationsFieldSubitemInner3 {
+    padding: 4px;
+    border-radius: 2px;
+    border: 1px solid #c7c7c7;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+  }
+
+  .observationsFieldIcon3 {
+    width: 13.5px;
+    height: 15px;
+    left: 2.25px;
+    top: 1.5px;
+    position: absolute;
+    border: 1.5px solid #c7c7c7;
+  }
+
+  .optionsContainerRequirement {
+    display: flex;
+    height: 100%;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+.verticalBarChart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 66vh;
+  padding: 0px 50px 0px 100px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2vh;
+  margin-left: 1vw;
+
+  @media (max-width: 1500px) {
+    height: 60vh !important;
+  }
+  min-width: 550px !important;
+}
+
+.verticalBar {
+  width: 42px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  transition: "0.3s";
+  animation-name: barchartAnimation;
+  animation-duration: 1s;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.verticalBar:hover {
+  opacity: 1;
+}
+
+.barLabel {
+  margin-top: 5px;
+  font-size: 20px;
+  position: absolute;
+  bottom: -5vh;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gridLines {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  padding: 0px 50px 0px 0px;
+}
+
+.gridLine {
+  border-bottom: 1px solid #cccccc74;
+  flex-grow: 1;
+  z-index: -10;
+}
+
+@keyframes barchartAnimation {
+  0% {
+    opacity: 0;
+    transform: scaleY(0%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scaleY(100%);
+  }
+}

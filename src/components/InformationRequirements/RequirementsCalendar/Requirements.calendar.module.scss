@@ -1,0 +1,33 @@
+@import "../../../Variables/variables";
+
+.calendarContainerMain {
+    display: flex;
+    width: 100%;
+
+
+    .observationsFieldContainer {
+        width: auto;
+        height: auto;
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: end;
+        padding-right: 15px;
+    }
+
+    .containerCalendarFull{
+        display: block;
+        width: 100%;
+    }
+
+    .calendarFirst{
+        width: 100%;
+        padding-right: 10px;
+    }
+}
+
+
+.fc .fc-daygrid-day-top {
+    flex-direction: row !important;
+}

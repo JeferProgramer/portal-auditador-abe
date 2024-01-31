@@ -1,0 +1,456 @@
+@import "../../../Variables/variables";
+
+.customTableRequirements {
+  width: 100%;
+}
+
+.schemaStickyHeader {
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.custom-table-schema th,
+.custom-table-schema td {
+  position: relative;
+  padding: 0px 6px;
+  text-align: left;
+}
+
+.custom-table-schema tr:hover {
+  background-color: #f7fbee;
+}
+
+.custom-header-cell {
+  background-color: red;
+
+  .containerProjectRequirements {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.customHeaderCellRequirements {
+  margin-right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.cunstom-cell-nivel {
+  text-align: center !important;
+  width: 122px;
+}
+
+.custom-cell-clase {
+  max-width: 120px;
+  text-align: center !important;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.container-edit-icons {
+  display: flex;
+  align-items: flex-end;
+  height: 38.5px;
+  padding-top: 5px;
+  justify-content: space-around;
+}
+
+.requirementsCustomHeaderRow {
+  background-color: $color-tertiary !important;
+  color: white !important;
+  font-size: 16px;
+  justify-content: center !important;
+  font-family: $font-main !important;
+
+  .customHeaderCellProject {
+    width: 100%;
+    text-align: center !important;
+  }
+
+  .custom-header-cell-saldo-ajustes {
+    text-align: right !important;
+  }
+
+  .custom-header-cell-saldo-ajustes-registrados {
+    text-align: right !important;
+  }
+
+  .custom-header-cell-riesgos {
+    text-align: right !important;
+  }
+
+  .custom-header-cell-rubros {
+    width: 0px;
+    text-align: center !important;
+    align-items: center !important;
+
+    margin-right: 120px;
+  }
+}
+
+.customHeaderCell {
+  height: 52px;
+  width: 90px;
+}
+
+.custom-cell-number {
+  text-align: right !important;
+  font-family: $font-main;
+  font-size: 16px;
+  vertical-align: middle !important;
+}
+
+.customCell {
+  font-family: $font-main;
+  font-size: 16px;
+  vertical-align: middle !important;
+  height: 31px !important;
+  position: relative;
+
+  .schemaVisita {
+    max-width: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.nameRequest {
+  display: block;
+  max-width: 90%;
+  padding: 0px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schemaCuentaVisita {
+  max-width: 100%;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.requirementsTableContainer {
+  margin: 0px 10px;
+  min-height: 1px; // Puedes ajustar esto según tus necesidades
+
+  /* Otros estilos personalizados si es necesario */
+  table {
+    --global-title-color: rgba(0, 130, 137, 1);
+    --global-background-color: white;
+    --global-content-background-color: white;
+    --global-border-color: transparent;
+    --global-border-radius: 8px;
+    --global-border-width-1: 1px;
+    --global-space-fixed-2: 10px;
+    --global-space-fixed-3: 15px;
+
+    color: black;
+    background-color: var(--global-content-background-color);
+    border-collapse: separate;
+    border-color: transparent;
+    border-style: solid;
+    border-radius: var(--global-border-radius);
+    border-width: 0 var(--global-border-width-1) var(--global-border-width-1)
+      var(--global-border-width-1);
+    border-spacing: 0;
+    width: 100%;
+
+    thead {
+      position: sticky;
+      top: 0;
+      // z-index: 10;
+
+      th:first-child {
+        border-top-left-radius: var(--global-border-radius);
+      }
+
+      th:last-child {
+        border-top-right-radius: var(--global-border-radius);
+      }
+    }
+  }
+}
+
+.customCellProject {
+  width: 100% !important;
+  font-family: $font-main;
+  font-size: 16px;
+  vertical-align: middle !important;
+  height: 38.5px !important;
+
+  .spanProject {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0px 5px;
+  }
+}
+
+.custom-header-acciones {
+  width: 20px;
+}
+
+.custom-cell-rubro {
+  text-align: right !important;
+  align-items: end !important;
+  margin-left: auto !important;
+  vertical-align: middle !important;
+}
+
+.custom-row-clase {
+  background-color: #99cdd0;
+
+  td {
+    border-bottom: none !important;
+    padding: 2px 5px;
+  }
+}
+
+.custom-cell-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.customRowGrupo {
+  background-color: #e5f1cb;
+
+  td {
+    border-bottom: none !important;
+  }
+}
+
+.ui.popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: min-content;
+  z-index: 1900;
+  border: 1px solid $color-cuaternary !important;
+  line-height: 1.4285em;
+  max-width: 250px;
+  background: #fff;
+  padding: 0.833em 1em;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12),
+    0 2px 10px 0 rgba(34, 36, 38, 0.15);
+}
+
+.css-1dimb5e-singleValue {
+  overflow: unset !important;
+}
+
+.centered-loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 999;
+}
+
+.border-bottom-ecuaciones {
+  border-bottom: 1px solid $color-cuaternary;
+}
+
+.requirementsTableContainer {
+  max-height: 72vh;
+  width: 99%;
+  overflow-y: auto;
+}
+
+.custom-cell-acctions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 7px !important;
+  height: 38.5px !important;
+}
+
+.dashed-horizontal-row-line {
+  border-bottom: 0.5px dashed var(--lineas-de-tablas, #a6d04f);
+  height: 0;
+  content: "";
+}
+
+// @media screen and (max-width: 1400px) {
+//   .requirementsTableContainer {
+//     height: 60% !important;
+//   }
+// }
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+}
+
+.statusCircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.requirementsInformationTitleModal {
+  font-family: $font-main;
+  font-weight: bold;
+}
+
+.hide{
+  display: none !important;
+}
+.textAreaComments {
+  font-family: $font-main;
+  font-size: 16px;
+  padding: 10px 0px 10px 5px;
+  width: "100%";
+  border: "1px solid  #C7C7C7 !important";
+}
+
+.commentsListRequirements {
+  border-radius: 10px 10px 10px 0px;
+  background: var(--bordes, #f3f3f3);
+  padding: 10px;
+  display: flex;
+  margin: 10px 10px 10px 30px;
+}
+
+.observationsFieldContainer {
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  padding: 10px;
+
+  >* {
+    flex-basis: content;
+  }
+}
+
+.observationsFieldItem {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 6px;
+  display: flex;
+}
+
+.observationsFieldInnerItem {
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.observationsFieldText {
+  color: #36455d;
+  font-size: 18px;
+  font-family: $font-main;
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.observationsFieldSubitem {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1px;
+  display: flex;
+}
+
+.observationsFieldSubitemInner {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #c7c7c7;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.observationsFieldIconContainer {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+
+.observationsFieldIcon {
+  width: 13.5px;
+  height: 13.5px;
+  left: 2.25px;
+  top: 2.25px;
+  position: absolute;
+  border: 1.5px solid #c7c7c7;
+}
+
+.observationsFieldSubitemInner2 {
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #a6d04f;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.observationsFieldIcon2 {
+  width: 13.5px;
+  height: 9px;
+  left: 2.25px;
+  top: 4.5px;
+  position: absolute;
+  border: 1.93px solid #a6d04f;
+}
+
+.observationsFieldSubitemInner3 {
+  padding: 4px;
+  border-radius: 2px;
+  border: 1px solid #c7c7c7;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  display: flex;
+}
+
+.observationsFieldIcon3 {
+  width: 13.5px;
+  height: 15px;
+  left: 2.25px;
+  top: 1.5px;
+  position: absolute;
+  border: 1.5px solid #c7c7c7;
+}
+
+.optionsContainerRequirement {
+  display: flex;
+  height: 100%;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.containerActions{
+  display: flex;
+  justify-content: end;
+  width: 95%;
+  position: relative;
+  gap: 5px;
+  align-items: center;
+}

@@ -1,0 +1,178 @@
+@import "../../Variables/variables";
+$line-height: 15.89px;
+$padding: 3.18px 12.72px;
+$border-radius: 6.36px;
+$gap: 6.36px;
+$line-height: 12.72px;
+$padding: 3.18px;
+$border-radius: 4.77px;
+$gap: 6.36px;
+$inner-div-size: 28px;
+$inner-most-div-size: 4.77px;
+$inner-most-div-position: 5.56px;
+
+.filtersCalendarContainerMain {
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 6px;
+    align-items: center;
+}
+
+.filtersCalendarContainer {
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: $gap;
+    flex-wrap: wrap;
+
+    .filtersCalendarItem,
+    .filtersCalendarOptions {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        // flex-wrap: wrap;
+    }
+
+    .filtersCalendarLabel,
+    .filtersCalendarOption,
+    .filtersCalendarOptionApproved {
+        padding: $padding;
+        border-radius: $border-radius;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $gap;
+        font-family: $font-main;
+        font-weight: 700;
+        line-height: $line-height;
+        word-wrap: break-word;
+        cursor: pointer;
+    }
+
+    .filtersCalendarLabel {
+        color: #36455D;
+    }
+
+    .filtersCalendarOption,
+    .filtersCalendarOptionApproved {
+        color: #9197B3;
+    }
+
+    .filtersCalendarOptionApproved {
+        background: #A6D04F;
+        color: white;
+    }
+}
+
+.filtersCalendarChildContainer {
+    width: 20%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.79px;
+}
+
+.filtersCalendarChildItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.filtersCalendarChildInnerItem {
+    padding: $padding;
+    background: #F4F4F5;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+.filtersCalendarChildInnerDiv {
+    width: $inner-div-size;
+    height: $inner-div-size;
+    position: relative;
+    cursor: pointer;
+}
+
+.filtersCalendarChildInnerMostDiv {
+    width: $inner-most-div-size;
+    height: $inner-most-div-size;
+    left: $inner-most-div-position;
+    top: 3.97px;
+    position: absolute;
+    background: #36455D;
+}
+
+.filtersCalendarChildTextItem {
+    height: 24px;
+    padding-left: 12.72px;
+    padding-right: 12.72px;
+    padding-top: 4.77px;
+    padding-bottom: 4.77px;
+    background: #F4F4F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+    color: #36455D;
+    font-family: $font-main;
+    font-weight: 700;
+    line-height: $line-height;
+    word-wrap: break-word;
+}
+
+.searchCalendarContainer {
+    width: 10vw;
+    height: 100%;
+    padding: 3.18px;
+    background: #F4F4F5;
+    border-radius: 3.18px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6.36px;
+
+    .searchCalendarInnerContainer {
+        width: 15.89px;
+        height: 15.89px;
+        padding-top: 1.59px;
+        padding-bottom: 1.60px;
+        padding-left: 1.59px;
+        padding-right: 1.60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .searchCalendarInnerDiv {
+        width: 12.71px;
+        height: 12.71px;
+        background: #9197B3;
+    }
+
+    .searchCalendarText {
+        border: none;
+        width: 100%;
+        height: 100%;
+        color: #A1A1AA;
+        flex: '1 1 0';
+        color: '#A1A1AA';
+        font-family: $font-main;
+        font-weight: 700;
+        line-height: 12.72px;
+        word-wrap: break-word;
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

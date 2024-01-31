@@ -1,0 +1,107 @@
+@import "../../Variables/variables";
+
+.eventContent {
+    width: 100%;
+    height: 100%;
+    padding: 8.29px;
+    background: white;
+    border-radius: 6.63px;
+    overflow: hidden;
+    border: 0.83px $color-cuaternary solid;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16.58px;
+    display: inline-flex;
+}
+
+.eventContentWrapper {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: inline-flex;
+}
+
+.eventDetails {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+}
+
+.eventTitle {
+    width: 100%;
+    padding: 8.29px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8.29px;
+    display: inline-flex;
+    flex-wrap: wrap;
+        // >* {
+        //         flex-basis: content;
+        //     }
+}
+
+.eventDot {
+    width: 11.60px;
+    height: 11.60px;
+    background: #15A8FA;
+    border-radius: 9999px;
+}
+
+.eventDescription {
+    width:78%;
+    color: $color-secondary;
+    font-size: 14px;
+    font-family: $font-main;
+    font-weight: 700;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.eventSpacer {
+    width: 14px;
+    height: 14px;
+    position: relative;
+}
+
+.eventDate {
+    width: 90%;
+    align-self: stretch;
+    padding-bottom: 2.29px;
+    padding-left: 8.29px;
+    padding-right: 8.29px;
+    border-bottom: 0.41px $color-gray solid;
+    justify-content: center;
+    align-items: center;
+    gap: 8.29px;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.dateDot {
+    width: 17px;
+    height: 17px;
+}
+
+.dateDotBorder {
+    width: 8.70px;
+    height: 9.67px;
+    left: 1.45px;
+    top: 0.97px;
+    position: absolute;
+    border: 0.97px #C7C7C7 solid;
+}
+
+.eventDateText {
+    color: #C7C7C7;
+    font-size: 13.26px;
+    font-family: $font-main;
+    font-weight: 700;
+    word-wrap: break-word;
+    display: contents;
+}

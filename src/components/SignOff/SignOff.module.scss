@@ -1,0 +1,141 @@
+@import "../../Variables/variables";
+
+.signOffContainer {
+    padding: 10px 6px;
+    background: white;
+    border-radius: 8px;
+    border: 1px $color-cuaternary solid;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    z-index: 1;
+    position: absolute;
+    left: -130px;
+    top: 50px;
+}
+
+.signOffInnerContainer,
+.signOffInfoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+}
+
+.signOffGreetingContaine {
+    display: flex;
+}
+
+.signOffGreetingContainer,
+.signOffNameContainer,
+.signOffEmailContainer {
+    height: auto;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.signOffIconContainer {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.signOffIcon {
+    width: 16.67px;
+    height: 16.67px;
+    left: 1.67px;
+    top: 1.67px;
+    position: absolute;
+    border: 1.50px #9197B3 solid;
+}
+
+.signOffGreetingText {
+    color: $color-secondary;
+    font-family: $font-main;
+    font-weight: 500;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 5vw;
+}
+
+.signOffGreetingHighlight {
+    color: $color-cuaternary;
+}
+
+.signOffGreetingName {
+    color: $color-secondary;
+}
+
+.signOffDivider {
+    width: 158px;
+    height: 0;
+    border: 0.50px #C7C7C7 solid;
+}
+
+.signOffNameContainer,
+.signOffEmailContainer {
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.signOffName {
+    width: 7vw;
+    color: $color-secondary;
+    font-size: 16px;
+    font-family: $font-main;
+    font-weight: 700;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.signOffEmail {
+    flex: 1 1 0;
+    color: $color-secondary;
+    font-size: 14px;
+    font-family: $font-main;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+.signOffButtonContainer {
+    align-self: stretch;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.signOffButton {
+    padding: 4px;
+    background: $color-cuaternary;
+    border-radius: 4px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.signOffButtonText {
+    text-align: right;
+    color: white;
+    font-size: 12px;
+    font-family: $font-main;
+    font-weight: 700;
+    word-wrap: break-word;
+}

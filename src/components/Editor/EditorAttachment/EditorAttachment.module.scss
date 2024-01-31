@@ -1,0 +1,207 @@
+.wrapper {
+  height: 100%;
+  max-height: 70px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  border: none;
+}
+
+.wrapperFullMode {
+  height: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+.fileAttachmentsWrapper {
+  position: relative;
+  font-size: 10px;
+  font-family: "";
+  padding-top: 5px;
+  box-sizing: border-box;
+
+  .fileAttachmentsTitle {
+    font-weight: bold;
+    line-height: 1em;
+    padding-bottom: 10px;
+    font-family: inherit;
+    font-size: inherit;
+  }
+
+  .file {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #aaa;
+    margin-bottom: 5px;
+
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-family: inherit;
+
+    .fileIcon {
+      width: 48px;
+    }
+
+    .fileDescription {
+      flex: 1;
+      padding-left: 10px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      max-width: 100%;
+      overflow: hidden;
+    }
+
+    .fileOptions {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      column-gap: 7px;
+
+      &.lessThan620 {
+        flex-wrap: wrap;
+
+        .optionsGroup {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          column-gap: 15px;
+          row-gap: 5px;
+        }
+
+        .fileOption {
+          padding-top: 5px;
+        }
+      }
+      .downloadContainerLink {
+        margin-left: 12px;
+        display: inline;
+
+        a {
+          font-weight: 400;
+        }
+      }
+    }
+
+    .fileName {
+      font-size: 10px;
+      margin-bottom: 5px;
+    }
+
+    .fileOption {
+      font-size: 10px;
+
+      .fileSizeOption {
+        font-weight: bold;
+        font-style: italic;
+      }
+
+      a {
+        font-size: 13px;
+      }
+
+      &.downloadFileOption {
+        a {
+          font-style: normal;
+          text-decoration: none;
+          outline: none;
+          display: block;
+          line-height: 1em;
+        }
+      }
+
+      &.deleteFileOption,
+      &.completeFileOption,
+      &.reviewFileOption {
+        a {
+          line-height: 1em;
+          font-family: inherit;
+          display: block;
+          border-width: 0;
+          border-style: none;
+          cursor: pointer;
+          background-color: transparent;
+          outline: none;
+        }
+      }
+
+      &.deleteFileOption a {
+        color: var(--accent-red);
+      }
+
+      &.completeFileOption a,
+      &.reviewFileOption a {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .completeFileOptionIcon,
+        .reviewFileOptionIcon {
+          padding-right: 5px;
+
+          &,
+          svg {
+            height: 10px;
+          }
+        }
+      }
+
+      &.completeFileOption a {
+        color: var(--primary-emerald-green);
+      }
+
+      &.reviewFileOption a {
+        color: var(--primary-green);
+
+        svg:last-child {
+          margin-left: -6px;
+        }
+      }
+    }
+  }
+
+  &:global(.mini) {
+    .fileAttachmentsTitle {
+      padding-bottom: 3px;
+      font-size: 12px;
+    }
+    .file {
+      padding: 2px 10px;
+      .fileIcon {
+        width: 24px;
+      }
+
+      .fileName {
+        margin-bottom: 2px;
+        font-size: 13px;
+      }
+      .fileSizeOption {
+        font-size: 11px;
+      }
+      .fileOptions {
+        .optionsGroup {
+          column-gap: 7px;
+        }
+      }
+    }
+  }
+}
+
+.editorWrapper {
+  :global(.cke_focus) {
+    outline: none;
+  }
+}

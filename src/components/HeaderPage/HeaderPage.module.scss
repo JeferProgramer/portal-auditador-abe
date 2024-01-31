@@ -1,0 +1,92 @@
+@import "../../Variables/variables";
+
+.containerHeaderPage {
+    height: 80px;
+    width: 100%;
+    margin-left: 18px;
+    justify-content: space-between;
+    display: flex;
+    border-bottom: 1px solid rgba(171, 171, 171, 0.5);
+
+    .subcontainerTitleHeaderpage {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .headerPageContainer {
+            width: 100%;
+            height: 100%;
+            padding: 14.70px;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 14.70px;
+            display: inline-flex;
+        }
+
+        .headerPageText {
+            color: $color-cuaternary;
+            font-size: 48px;
+            font-family: $font-main;
+            font-weight: 900;
+            word-wrap: break-word;
+        }
+
+        .headerPageIconContainer {
+            width: 32px;
+            height: 32px;
+            position: relative;
+        }
+
+        .headerPageIcon {
+            width: 25.33px;
+            height: 25.33px;
+            left: 2.67px;
+            top: 2.67px;
+            position: absolute;
+            border: 2.67px solid $color-cuaternary;
+        }
+    }
+
+    .subContainerUser {
+        width: 25%;
+        display: flex;
+        align-items: center;
+
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            justify-content: flex-start;
+            align-items: center;
+            display: inline-flex;
+
+            .containerUser {
+                width: 100%;
+                margin-left: 16px;
+            }
+
+            .containerUser .greeting {
+                color: #0D0D2F;
+                font-size: 18.70px;
+                font-family: $font-main;
+                font-weight: 500;
+                word-wrap: break-word;
+                display: contents;
+                width: 200px;
+                overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+            }
+
+            .containerUser .emoji {
+                color: #0D0D2F;
+                font-size: 18.70px;
+                font-family: $font-main;
+                font-weight: 400;
+                word-wrap: break-word;
+            }
+        }
+
+
+    }
+}
