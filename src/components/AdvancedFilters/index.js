@@ -10,19 +10,11 @@ import {
 } from "@mui/material";
 import AbiIcon from "@/Icons/AbiIcon";
 import CloseIcon from "@/Icons/CloseIcon";
-import { advancedFilterData } from "@/helpers/filter";
 import CheckboxFilter from "../CheckboxFilter";
 import { getUniqueList } from "@/helpers/format";
 
-const AdvancedFilters = ({ originalData, data, setData, setEstadoState, estadoState, }) => {
+const AdvancedFilters = ({ originalData, setEstadoState, estadoState, handleChangeState, handleAccept }) => {
   const [openDialog, setOpenDialog] = useState(false);
-  const [estadoCheckboxState, setEstadoCheckboxState] = useState({});
-
-  useEffect(() => {
-    setEstadoCheckboxState(estadoState)
-    let filteredData = advancedFilterData(originalData, estadoState)
-    setData(filteredData)
-  }, [estadoState,])
 
   const handleOpenDialog = () => {
     setOpenDialog(true);
@@ -32,19 +24,7 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, estadoSt
     setOpenDialog(false);
   };
 
-  const handleChangeState = (event) => {
-    setEstadoCheckboxState({ ...estadoCheckboxState, [event.target.name]: event.target.checked });
-  };
-
-  const handleAccept = () => {
-    let filteredData = advancedFilterData(data, estadoCheckboxState)
-    setEstadoState(estadoCheckboxState)
-    setData(filteredData)
-  }
-
   const handleClean = () => {
-    setData(originalData)
-    setEstadoCheckboxState({})
     setEstadoState({})
   }
 
@@ -55,6 +35,7 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, estadoSt
     handleAccept();
     setOpenDialog(false);
   };
+
 
   return (
     <div className={styles.advancedFilters} onClick={handleOpenDialog}>
@@ -84,7 +65,7 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, estadoSt
           sx={{ display: "flex", justifyContent: "center" }}
         >
           <CheckboxFilter
-            state={estadoCheckboxState}
+            state={estadoState}
             handleChange={handleChangeState}
             options={uniqueStateList}
             principalCheckboxLabel="Estado"

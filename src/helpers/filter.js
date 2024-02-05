@@ -6,3 +6,13 @@ export function advancedFilterData(data, estadoCheckboxState) {
     }
     return filteredData;
 }
+
+export const filterBySelection = (data, selectedProject, selectedVisit, selectedResponsible) => {
+    return data?.filter((item) => {
+        return (
+            (!selectedProject || (selectedProject !== "" && item.proyecto.id === selectedProject)) &&
+            (!selectedVisit || (selectedVisit !== "" && item.visita.id === selectedVisit)) &&
+            (!selectedResponsible || (selectedResponsible && item.usuario_responsable.id === selectedResponsible))
+        );
+    });
+}
