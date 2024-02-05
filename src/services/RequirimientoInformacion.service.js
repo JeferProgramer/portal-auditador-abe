@@ -1,6 +1,6 @@
 import axiosApiInstance from "./axiosInterceptor"
 
-export const getRequirements = async () => {
-    const response = await axiosApiInstance.get(`/solicitud_archivo/@me/`)
+export const getRequirements = async (id_proyecto) => {
+    const response = await axiosApiInstance.get(`/proyecto/${id_proyecto}/solicitud_archivo/`)
     return response.data
 }

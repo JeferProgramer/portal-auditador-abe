@@ -8,6 +8,7 @@ import InputSearch from "@/components/InputSearch";
 import AdvancedFilters from "@/components/AdvancedFilters";
 import FilterTags from "@/components/FilterTags";
 import RequirementsTable from "./RequirementsTable";
+import CreateRequest from "@/components/CreateRequest";
 
 const RequirementsList = ({ data, viewsRender }) => {
   const [localdata, setLocaldata] = useState(data);
@@ -49,7 +50,7 @@ const RequirementsList = ({ data, viewsRender }) => {
             rubroState={rubroState}
           />
         </div>
-
+        <CreateRequest/>
         {viewsRender()}
       </div>
       <FilterTags

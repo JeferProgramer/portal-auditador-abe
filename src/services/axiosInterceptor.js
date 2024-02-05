@@ -14,7 +14,7 @@ axiosApiInstance.interceptors.request.use(
       }
 
       if (session_id) {
-        config.headers.Authorization = `Bearer ${session_id}`;
+        config.headers.Authorization = `Token ${session_id}`;
       }
     }
     return config;

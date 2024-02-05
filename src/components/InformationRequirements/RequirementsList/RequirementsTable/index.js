@@ -18,6 +18,7 @@ import { DocumentRequirementManagement } from "../DocumentRequirementManagement"
 import InfoRed from '@/Icons/InfoRed';
 import { filters } from '@/utils/filters';
 import AlertReturned from '@/components/AlertReturned';
+import Edit from '@/Icons/Edit';
 
 
 const RequirementsTable = ({ data }) => {
@@ -33,26 +34,15 @@ const RequirementsTable = ({ data }) => {
                     <tr className={styles.requirementsCustomHeaderRow}>
                         <th className={styles.customHeaderCell}>
                             <div className={styles.containerProjectRequirements}>
-                                <div className={styles.customHeaderCellProject}>Proyecto</div>
+                                <div className={styles.customHeaderCellProject}>Visita</div>
                             </div>
-                        </th>
-                        <th style={{ width: "50px" }}>
-                            <div className={styles.customHeaderCellRequirements}>Visita</div>
                         </th>
                         <th style={{ width: "122px" }}>
                             <div className={styles.customHeaderCellRequirements}>
                                 Nombre de la Solicitud
                             </div>
                         </th>
-                        <th style={{ width: "50px" }}>
-                            <div className={styles.customHeaderCellRequirements}>
-                                Fase Auditoria
-                            </div>
-                        </th>
-                        <th style={{ width: "80px" }}>
-                            <div className={styles.customHeaderCellRequirements}>Rubro</div>
-                        </th>
-                        <th style={{ width: "50px" }}>
+                        <th style={{ width: "150px" }}>
                             <div className={styles.customHeaderCellRequirements}>
                                 Responsable
                             </div>
@@ -91,15 +81,11 @@ const RequirementsTable = ({ data }) => {
                             >
                                 <div className={styles.spanProject}>
                                     <span className={styles.spanProject} title={item.project}>
-                                        {item.proyecto.label}
+                                        {toCamelCase(item.visita.label)}
                                     </span>
                                 </div>
                             </td>
-                            <td className={[styles.customCell, styles.schemaVisita]}>
-                                <div className={styles.schemaCuentaVisita} title={item.visita}>
-                                    {toCamelCase(item.visita.label)}
-                                </div>
-                            </td>
+                           
                             <td className={[styles.customCell, styles.nameRequest]}>
                                 <span
                                     className={[styles.nameRequest]}
@@ -109,20 +95,12 @@ const RequirementsTable = ({ data }) => {
                                     {toCamelCase(item.titulo) || null}
                                 </span>
                             </td>
-                            <td
-                                title={item.audit_phase}
-                            >
-                                {toCamelCase(item.fase_auditoria)}
-                            </td>
-                            <td style={{ textAlign: "center" }}>
-                                {toCamelCase(item?.rubro)}
-                            </td>
                             <td>
                                 {item?.usuario_responsable?.label}
                             </td>
                             <td
                                 style={{
-                                    color: item?.state === "Vencido" ? "red" : "black",
+                                    color: item?.status === "VENCIDO" ? "#FF0B0B" : "inherent",
                                 }}
                             >
                                 {item?.fecha_vencimiento}
@@ -141,6 +119,16 @@ const RequirementsTable = ({ data }) => {
                                 {item?.status.toLowerCase() === filters[1] && (
                                     <AlertReturned variant={2} />
                                 )}
+                                {item.borrador ? (
+                                    <AlertReturned
+                                        variant={2}
+                                        title="Borrador"
+                                        component={(props) => (
+                                           <Edit/>
+                                        )}
+                                    />
+                                ): (
+
                                 <AlertReturned
                                     variant={2}
                                     title="Ver"
@@ -154,6 +142,7 @@ const RequirementsTable = ({ data }) => {
                                         />
                                     )}
                                 />
+                                )}
                             </td>
                         </tr>
                     ))}

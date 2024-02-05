@@ -4,21 +4,24 @@ import { OPTIONS } from "@/utils/InformationRequirements";
 import RequirementsPercentage from "./RequirementsPercentage";
 import RequirementsList from "./RequirementsList";
 import RequirementsCalendar from "./RequirementsCalendar";
-import axios from "axios";
 import cx from "classnames";
 import { LineChartUp } from "@/Icons/LineChartUp";
 import Menu from "@/Icons/Menu";
 import CalendarDate from "@/Icons/CalendarDate";
 import { getRequirements } from "@/services/RequirimientoInformacion.service";
+import { getProjectIdFromURL } from "@/helpers/idProject";
 
 const InformationRequirements = () => {
-  const [activeOption, setActiveOption] = useState(OPTIONS.PORCENTAJE);
+  const [activeOption, setActiveOption] = useState(OPTIONS.LISTA);
   const [data, setData] = useState(null);
+  const id_proyecto = getProjectIdFromURL();
 
-  useEffect(async() => {
-   const data = await getRequirements()
-   setData(data.data)
+  useEffect(async () => {
+    const data = await getRequirements(id_proyecto);
+    setData(data.data);
   }, []);
+
+  console.log("data",data);
 
   const viewsRender = () => {
     return (

@@ -83,13 +83,14 @@ export const mapDataToOptions = (data) => data?.map(item => ({ label: item.label
 export const getUniqueObjects = (array, key, defaultOption) => {
     const uniqueObjects = array
         ? array.filter((item, index, self) =>
-            index === self.findIndex((t) => (
-                t[key] === item[key]
+            item && index === self.findIndex((t) => (
+                t && t[key] === item[key]
             ))
         )
         : [];
     return defaultOption ? [defaultOption, ...uniqueObjects] : uniqueObjects;
 }
+
 
 export const getUniqueList = (data, key) => {
     let seen = {};

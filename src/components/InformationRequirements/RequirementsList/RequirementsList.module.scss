@@ -149,7 +149,7 @@
     --global-space-fixed-2: 10px;
     --global-space-fixed-3: 15px;
 
-    color: black;
+    color: #36455D;
     background-color: var(--global-content-background-color);
     border-collapse: separate;
     border-color: transparent;
@@ -159,6 +159,7 @@
       var(--global-border-width-1);
     border-spacing: 0;
     width: 100%;
+    font-weight: 700;
 
     thead {
       position: sticky;
@@ -268,7 +269,8 @@
 }
 
 .requirementsTableContainer {
-  max-height: 72vh;
+  margin-top: 1vh;
+  max-height: 74vh;
   width: 99%;
   overflow-y: auto;
 }
@@ -333,7 +335,7 @@
 .observationsFieldContainer {
   width: 100%;
   height: auto;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 12px;
   display: flex;
   flex-wrap: wrap;
@@ -343,6 +345,10 @@
   >* {
     flex-basis: content;
   }
+}
+
+.borradorGrupo{
+  color: #C7C7C7 !important;
 }
 
 .observationsFieldItem {

@@ -14,17 +14,15 @@ import { advancedFilterData } from "@/helpers/filter";
 import CheckboxFilter from "../CheckboxFilter";
 import { getUniqueList } from "@/helpers/format";
 
-const AdvancedFilters = ({ originalData, data, setData, setEstadoState, setRubroState, estadoState, rubroState }) => {
+const AdvancedFilters = ({ originalData, data, setData, setEstadoState, estadoState, }) => {
   const [openDialog, setOpenDialog] = useState(false);
-  const [rubroCheckboxState, setRubroCheckboxState] = useState({});
   const [estadoCheckboxState, setEstadoCheckboxState] = useState({});
 
   useEffect(() => {
     setEstadoCheckboxState(estadoState)
-    setRubroCheckboxState(rubroState)
-    let filteredData = advancedFilterData(originalData, estadoState, rubroState)
+    let filteredData = advancedFilterData(originalData, estadoState)
     setData(filteredData)
-  }, [estadoState, rubroState])
+  }, [estadoState,])
 
   const handleOpenDialog = () => {
     setOpenDialog(true);
@@ -38,27 +36,19 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, setRubro
     setEstadoCheckboxState({ ...estadoCheckboxState, [event.target.name]: event.target.checked });
   };
 
-  const handleChangeRubro = (event) => {
-    setRubroCheckboxState({ ...rubroCheckboxState, [event.target.name]: event.target.checked });
-  };
-
   const handleAccept = () => {
-    let filteredData = advancedFilterData(data, estadoCheckboxState, rubroCheckboxState)
+    let filteredData = advancedFilterData(data, estadoCheckboxState)
     setEstadoState(estadoCheckboxState)
-    setRubroState(rubroCheckboxState)
     setData(filteredData)
   }
 
   const handleClean = () => {
     setData(originalData)
     setEstadoCheckboxState({})
-    setRubroCheckboxState({})
     setEstadoState({})
-    setRubroState({})
   }
 
   let uniqueStateList = getUniqueList(originalData, 'status');
-  let uniqueRubroList = getUniqueList(originalData, 'rubro');
 
   const handleClickAccept = (event) => {
     event.stopPropagation();
@@ -91,7 +81,7 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, setRubro
           </div>
         </DialogTitle>
         <DialogContent
-          sx={{ display: "flex", justifyContent: "space-between" }}
+          sx={{ display: "flex", justifyContent: "center" }}
         >
           <CheckboxFilter
             state={estadoCheckboxState}
@@ -100,14 +90,8 @@ const AdvancedFilters = ({ originalData, data, setData, setEstadoState, setRubro
             principalCheckboxLabel="Estado"
             statusLabel={true}
           />
-          <CheckboxFilter
-            state={rubroCheckboxState}
-            handleChange={handleChangeRubro}
-            options={uniqueRubroList}
-            principalCheckboxLabel="Rubro"
-          />
         </DialogContent>
-        <DialogActions sx={{justifyContent: "center"}}>
+        <DialogActions sx={{ justifyContent: "center" }}>
           <div className={styles.containerButtonsFooter}>
             {" "}
             <Button

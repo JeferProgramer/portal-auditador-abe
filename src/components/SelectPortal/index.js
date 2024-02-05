@@ -2,10 +2,12 @@ import ChevronDown from "@/Icons/ChevronDown";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./SelectPortal.module.scss";
 
-const SelectPortal = ({ title, placeholder, options, handleChange }) => {
+const SelectPortal = ({ title, placeholder, options, handleChange, className, projectContainerClass, projectTitleClass, selectionBoxClass }) => {
   const [isListOpen, setIsListOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState(placeholder);
   const selectRef = useRef(null);
+
+  console.log("classNme", className);
 
   const toggleList = () => {
     setIsListOpen(!isListOpen);
@@ -33,11 +35,11 @@ const SelectPortal = ({ title, placeholder, options, handleChange }) => {
   }, []);
 
   return (
-    <div className={styles.observationsFieldContainer}>
-      <div className={styles.projectContainer} ref={selectRef}>
-        <div className={styles.projectTitle}>{title}</div>
+    <div className={`${styles.observationsFieldContainer} ${className}`}>
+      <div className={`${styles.projectContainer} ${projectContainerClass}`} ref={selectRef}>
+        <div className={`${styles.projectTitle} ${projectTitleClass}`}>{title}</div>
         <div className={styles.selectionContainer} onClick={toggleList}>
-          <div className={styles.selectionBox}>
+          <div className={`${styles.selectionBox} ${selectionBoxClass}`}>
             <div className={styles.selectionText} title={selectedOption}>
               {selectedOption}
             </div>

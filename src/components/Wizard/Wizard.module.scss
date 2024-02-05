@@ -1,0 +1,367 @@
+@import "../../Variables/variables";
+
+.containerWizard {
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+
+    .steps {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 17px;
+    }
+
+    .step {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .stepIcon {
+        width: 18px;
+        height: 18px;
+        position: relative;
+    }
+
+    .stepIconInner {
+        width: 15px;
+        height: 15px;
+        left: 1.5px;
+        top: 1.5px;
+        position: absolute;
+        border: 1.5px solid #A6D04F;
+    }
+
+    .stepTitle {
+        text-align: center;
+        color: #A6D04F;
+        font-size: 16px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+
+    .divider {
+        width: 16px;
+        height: 16px;
+        position: relative;
+    }
+
+    .dividerInner {
+        width: 4px;
+        height: 8px;
+        left: 6px;
+        top: 4px;
+        position: absolute;
+        border: 1.33px solid #36455D;
+    }
+
+    .formFields {
+        display: flex;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .form {
+        padding: 10px;
+        border-radius: 8px;
+        border: 0.5px solid #9197B3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .formGroup {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .formName {
+        width: 100%;
+    }
+
+    .formLabel {
+        padding-left: 7px;
+        padding-right: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 700;
+        color: $color-secondary;
+    }
+
+    .formLabelRequired {
+        color: #FF0B0B;
+        font-size: 16px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+
+    .formInput {
+        width: 513px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 0.5px solid #C7C7C7;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .formInputText {
+        flex: 1;
+        color: #C7C7C7;
+        font-size: 14px;
+        font-family: $font-main;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .selectWrapper {
+        width: 247px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .select {
+        width: 247px;
+        height: 30px;
+        padding: 10px;
+        border-radius: 6px;
+        border: 0.5px solid #C7C7C7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 49px;
+    }
+
+    .selectText {
+        flex: 1;
+        color: #C7C7C7;
+        font-size: 14px;
+        font-family: $font-main;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .selectIconWrapper {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+    }
+
+    .selectIcon {
+        width: 5px;
+        height: 10px;
+        left: 7.5px;
+        top: 5px;
+        position: absolute;
+        border: 2px solid #9197B3;
+    }
+
+    .datePickerWrapper {
+        width: 200px;
+        height: 30px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 0.5px solid #9197B3;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .datePickerText {
+        flex: 1;
+        color: #C7C7C7;
+        font-size: 14px;
+        font-family: $font-main;
+        font-weight: 600;
+        word-wrap: break-word;
+    }
+
+    .datePickerIconWrapper {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        transform: rotate(90deg);
+        transform-origin: 0 0;
+    }
+
+    .datePickerIcon {
+        width: 4px;
+        height: 8px;
+        left: 6px;
+        top: 4px;
+        position: absolute;
+        border: 1.33px solid #36455D;
+    }
+
+    .descriptionLabel {
+        padding-left: 7px;
+        padding-right: 10px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .description {
+        width: 1056px;
+        height: 100px;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 0.5px solid #9197B3;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .descriptionText {
+        flex: 1;
+        color: #C7C7C7;
+        font-size: 14px;
+        font-family: $font-main;
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+
+    .nextButton {
+        padding: 10px 20px;
+        background: #A6D04F;
+        cursor: pointer;
+        border-radius: 8px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .containerButtons{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .nextButtonText {
+        color: #F3F3F3;
+        font-size: 18px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+
+    .actions {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 53px;
+        padding-left: 275px;
+        padding-right: 275px;
+    }
+
+    .stepTitleDesactivate {
+        text-align: center;
+        color: $color-gray;
+        font-size: 16px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+
+    .cancelButton {
+        width: 234px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #A6D04F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+
+    .cancelButtonText {
+        color: #9197B3;
+        font-size: 18px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+        cursor: pointer;
+    }
+
+    .saveDraftButton {
+        width: 234px;
+        cursor: pointer;
+        padding: 10px;
+        background: #008289;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .saveDraftButtonText {
+        color: #F3F3F3;
+        font-size: 18px;
+        font-family: $font-main;
+        font-weight: 700;
+        word-wrap: break-word;
+    }
+
+    .inputField {
+        border-radius: 6px;
+        border: 0.5px solid var(--inputs, #C7C7C7);
+        width: 97%;
+        height: 30px;
+        font-size: 14px;
+        padding-left: 10px;
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+}
+.selectContainerFirstStep{
+    height: 30px;   
+
+}
+
+.projectContainerClass{
+    font-size: 16px;
+}
+
+.projectTitleClass{
+    margin-bottom: 0px !important;
+}
+
+.selectionBoxClass{
+    height: 13px !important;
+    border: 0.5px solid  #C7C7C7 !important;
+}
