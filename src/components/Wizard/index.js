@@ -3,26 +3,11 @@ import WizardLayout from '@/Layouts/WizardLayout';
 import React, { useState } from 'react';
 import FirstStep from './FirstStep';
 import SecondStep from './SecondStep';
-import styles from './Wizard.module.scss'
+import ThirStep from './ThirdStep';
 
-const Paso2 = ({ next, prev }) => (
-    <div>
-        <h2>Paso 2</h2>
-        <button onClick={prev}>Anterior</button>
-        <button onClick={next}>Siguiente</button>
-    </div>
-);
+const pasos = [FirstStep, SecondStep, ThirStep];
 
-const Paso3 = ({ prev }) => (
-    <div>
-        <h2>Paso 3</h2>
-        <button onClick={prev}>Anterior</button>
-    </div>
-);
-
-const pasos = [FirstStep, SecondStep, Paso3];
-
-const Wizard = () => {
+const Wizard = ({ setopenWizard }) => {
     const [pasoActual, setPasoActual] = useState(0);
 
     const next = () => setPasoActual(Math.min(pasoActual + 1, pasos.length - 1));
@@ -32,7 +17,7 @@ const Wizard = () => {
 
     return (
         <WizardLayout currentStep={pasoActual}>
-            <PasoComponente next={next} prev={prev} />
+            <PasoComponente next={next} prev={prev} setopen={setopenWizard} />
         </WizardLayout>
     );
 };

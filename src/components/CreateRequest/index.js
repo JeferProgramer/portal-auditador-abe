@@ -11,7 +11,7 @@ import styles from './CreateRequest.module.scss'
 const CreateRequest = () => {
     const [open, setOpen] = useState(false);
     const [openWizard, setopenWizard] = useState(false);
-    const { register, handleSubmit, formState: { errors, isValid } } = useForm({ mode: 'onChange' });
+    const { register, handleSubmit, formState: { errors, isValid }, reset } = useForm({ mode: 'onChange' });
     const onSubmit = data => console.log(data);
 
     console.log("open", errors);
@@ -71,6 +71,7 @@ const CreateRequest = () => {
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     setOpen(false);
+                                    reset();
                                 }}
                             >
                                 Cencelar
@@ -92,6 +93,7 @@ const CreateRequest = () => {
                                     onClick={() => {
                                         setOpen(false)
                                         setopenWizard(true)
+                                        reset();
                                     }}
                                 >
                                     Aceptar
@@ -120,7 +122,7 @@ const CreateRequest = () => {
                     </div>
                 </DialogTitle>
                 <DialogContent>
-                    <Wizard />
+                    <Wizard setopenWizard={setopenWizard} />
                 </DialogContent>
             </Dialog>
         </>

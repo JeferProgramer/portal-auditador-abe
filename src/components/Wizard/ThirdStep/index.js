@@ -1,55 +1,173 @@
-import React from 'react'
+import { SuccesMessageResult } from '@/components/confirmContents/successResultMessage'
+import Loading from '@/components/Loading'
+import MessageEmpty from '@/components/MessangeEmpty'
+import PlusIcon from '@/Icons/PlusIcon'
+import { getResponsibleUsers } from '@/services/usuarioResponsable.service'
+import { CheckBoxOutlined, RadioButtonChecked, RadioButtonUnchecked } from '@mui/icons-material'
+import { Button, Checkbox, Dialog, DialogContent } from '@mui/material'
+import React, { useEffect, useState } from 'react'
+import ResponsiblesTable from './ResponsiblesTable'
+import styles from './ThirdStep.module.scss'
 
-const ThirStep = () => {
-  return (
-      <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 9px; display: inline-flex">
-          <div style="justify-content: flex-start; align-items: center; gap: 644px; display: inline-flex">
-              <div style="padding-left: 7px; padding-right: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                  <div style="text-align: center"><span style="color: #36455D; font-size: 18px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">Asignar a </span><span style="color: #FF0B0B; font-size: 18px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">*</span></div>
-                  <div style="width: 8px; height: 8px; position: relative">
-                      <div style="width: 6.67px; height: 6.67px; left: 0.67px; top: 0.67px; position: absolute; border: 0.67px #008289 solid"></div>
-                  </div>
-              </div>
-              <div style="padding-left: 10px; padding-right: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                  <div style="width: 16px; height: 16px; position: relative">
-                      <div style="width: 13.33px; height: 13.33px; left: 1.33px; top: 1.33px; position: absolute; border: 1.33px #A6D04F solid"></div>
-                  </div>
-                  <div style="color: #9197B3; font-size: 14px; font-family: URW Geometric; font-weight: 600; word-wrap: break-word">Agregar Nuevo Responsable</div>
-              </div>
-          </div>
-          <div style="padding-left: 4px; padding-right: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-              <div style="width: 1065px; height: 52px; position: relative">
-                  <div style="width: 1065px; height: 52px; left: 0px; top: 0px; position: absolute; background: #008289; border-top-left-radius: 8px; border-top-right-radius: 8px"></div>
-                  <div style="width: 30.05px; left: 836.60px; top: 20px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">Área</div>
-                  <div style="width: 141.11px; left: 575.82px; top: 20px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">Cargo</div>
-                  <div style="width: 52.78px; left: 75.59px; top: 20px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">Nombre</div>
-                  <div style="width: 33.39px; left: 378.49px; top: 20px; position: absolute; text-align: center; color: white; font-size: 14px; font-family: URW Geometric; font-weight: 700; word-wrap: break-word">Mail</div>
-              </div>
-              <div style="width: 1058px; padding-top: 4px; padding-bottom: 4px; border-bottom: 0.50px #9197B3 solid; justify-content: center; align-items: center; gap: 66px; display: inline-flex">
-                  <div style="width: 230px; height: 30px; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                      <div style="flex: 1 1 0; color: #36455D; font-size: 16px; font-family: URW Geometric; font-weight: 500; word-wrap: break-word">Cristian Andres Suarez Torres</div>
-                  </div>
-                  <div style="width: 230px; height: 30px; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                      <div style="flex: 1 1 0; color: #36455D; font-size: 16px; font-family: URW Geometric; font-weight: 500; word-wrap: break-word">Cristian.Suarezt@gmail.com</div>
-                  </div>
-                  <div style="width: 150px; height: 30px; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                      <div style="flex: 1 1 0; color: #36455D; font-size: 16px; font-family: URW Geometric; font-weight: 500; word-wrap: break-word">Diseñador UI</div>
-                  </div>
-                  <div style="width: 150px; height: 30px; padding: 10px; justify-content: center; align-items: center; gap: 10px; display: flex">
-                      <div style="flex: 1 1 0; color: #36455D; font-size: 16px; font-family: URW Geometric; font-weight: 500; word-wrap: break-word">Diseño</div>
-                  </div>
-                  <div style="justify-content: flex-start; align-items: flex-start; gap: 6px; display: flex">
-                      <div style="width: 18px; height: 18px; background: #D9D9D9; border-radius: 9999px"></div>
-                  </div>
-              </div>
-              <div style="height: 7px; padding-top: 0.60px; padding-bottom: 1.28px; padding-left: 0.64px; padding-right: 63.98px; transform: rotate(90deg); transform-origin: 0 0; background: #FAFAFA; box-shadow: 0px -0.6396867036819458px 0px #F0F0F0 inset; justify-content: flex-start; align-items: center; display: inline-flex">
-                  <div style="width: 125.38px; align-self: stretch; background: #C1C1C1; border-radius: 2.56px; flex-direction: column; justify-content: center; align-items: center; gap: 6.40px; display: inline-flex">
-                      <div style="color: #C1C1C1; font-size: 2.56px; font-family: Roboto; font-weight: 400; word-wrap: break-word">.. ....................</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  )
+const ThirStep = ({ prev, setopen }) => {
+    const [responsibleUsers, setresponsibleUsers] = useState(null);
+    const [responsibleId, setResponsibleId] = useState(null);
+    const [expandTable, setExpandTable] = useState(false);
+    const [activateFinish, setActivateFinish] = useState(false);
+    const [alert, setAlert] = useState(false);
+
+    useEffect(() => {
+        getResponsibleUsers().then((data) => {
+            setresponsibleUsers(data.data)
+        })
+    }, [])
+    console.log("responsibleId", responsibleId);
+    console.log("activateFinish", activateFinish);
+    const handleCheckboxClick = (id) => {
+        setResponsibleId(prevId => prevId === id ? null : id);
+        setActivateFinish(!activateFinish);
+    }
+
+    const handleCheckBoxMultiple = (id) => {
+
+    }
+
+    const handleClickAccept = () => {
+        setAlert(!alert);
+    }
+
+    if (responsibleUsers === null) {
+        return (
+            <div className={styles.loadingContainer}>
+                <Loading size={"massive"} />
+            </div>
+        )
+    }
+
+    if (responsibleUsers?.length === 0) {
+        return (
+            <MessageEmpty title={"No se encontró información."} />
+        )
+    }
+
+    const handleButtonClick = () => {
+        setopen(!open)
+        setAlert(!alert)
+    }
+
+
+    return (
+
+        <>
+            <div className={styles.thirdStepContainer}>
+                <div className={styles.thirdStepHeader}>
+                    <div className={styles.thirdStepTitle}>
+                        <div className={`${styles.thirdStepText} ${styles.thirdStepNormal}`}>
+                            Asignar a
+                        </div>
+                        <div className={`${styles.thirdStepText} ${styles.thirdStepRequired}`}>
+                            *
+                        </div>
+                    </div>
+                    <div className={styles.thirdStepDot}>
+                        <div className={styles.thirdStepInner}></div>
+                    </div>
+                    <div className={styles.thirdStepButton}>
+                        <div className={styles.thirdStepIcon}>
+                            <PlusIcon />
+                        </div>
+                        <div className={styles.thirdStepText}>
+                            Agregar Nuevo Responsable
+                        </div>
+                    </div>
+                </div>
+
+                <ResponsiblesTable responsibleUsers={responsibleUsers} onCheckboxClick={handleCheckboxClick} responsibleId={responsibleId} />
+
+                <div className={styles.thirdStepOptions}>
+                    <div className={styles.thirdStepCopy}>
+                        <span>Copiar a </span>
+                        <Checkbox
+                            checkedIcon={<CheckBoxOutlined />}
+                            style={{
+                                color: '#00828966'
+                            }}
+                            onClick={() => setExpandTable(!expandTable)}
+                        />
+                    </div>
+                    <div className={styles.thirdStepResponsible}>
+                        <span>Asignar  Responsable en otro momento</span>
+                        <Checkbox
+                            checkedIcon={<CheckBoxOutlined />}
+                            style={{
+                                color: '#00828966'
+                            }}
+                            onClick={() => setActivateFinish(!activateFinish)}
+                        />
+                    </div>
+                </div>
+                {expandTable && (
+                    <ResponsiblesTable responsibleUsers={responsibleUsers} onCheckboxClick={handleCheckBoxMultiple} type={'multiple'} />
+                )}
+                <div className={styles.containerButtons}>
+                    <div className={styles.nextButton} onClick={prev}>
+                        <div className={styles.nextButtonText}>Atras</div>
+                    </div>
+                </div>
+                <div className={styles.thirdStepButtonsContainer}>
+                    <div className={styles.thirdStepButtons}>
+                        <Button
+                            type="submit"
+                            color="primary"
+                            className="secondary-abe-button"
+                            size="large"
+                            fullWidth
+                            style={{
+                                height: 40,
+                                borderRadius: 6,
+                                width: 200,
+                                fontSize: 18
+                            }}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setopen(false);
+                            }}
+                        >
+                            Cancelar
+                        </Button>
+                        <Button
+                            type="submit"
+                            color="primary"
+                            className="primary-abe-button"
+                            size="large"
+                            fullWidth
+                            style={{
+                                resize: "none",
+                                height: 40,
+                                borderRadius: 6,
+                                width: 200,
+                                fontSize: 18,
+                            }}
+                            disabled={!activateFinish}
+                            onClick={handleClickAccept}
+                        >
+                            Finalizar
+                        </Button>
+                    </div>
+                </div>
+            </div>
+            <Dialog open={alert} fullWidth={true}>
+                <DialogContent>
+                    <SuccesMessageResult
+                        text={'¡Se ha Creado con Exito la Solicitud! '}
+                        onButtonClick={handleButtonClick}
+                        succesActionButtonText={'Aceptar'}
+                    />
+                </DialogContent>
+            </Dialog>
+        </>
+
+    )
 }
 
 export default ThirStep

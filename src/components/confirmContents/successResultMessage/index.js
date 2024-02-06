@@ -21,7 +21,7 @@ export const SuccesMessageResult = ({
     <>
       <div className={cx(styles.contentConfirmModal)}>
         <div className={cx(styles.modalContentCenter)}>
-          <CheckCircle />
+          <CheckCircle size="big"/>
         </div>
 
         <div className={cx(styles.successContentConfirmContentText)}>{text}</div>

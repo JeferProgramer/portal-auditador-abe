@@ -1,0 +1,387 @@
+@import "../../../Variables/variables";
+
+.thirdStepContainer {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 9px;
+    display: inline-flex;
+
+    .thirdStepOptions {
+        width: 100%;
+
+        .thirdStepCopy {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            color: var(--Color-principal-textos, #36455D);
+            font-family: $font-main;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+
+        .thirdStepResponsible {
+            display: flex;
+            width: 100%;
+            justify-content: start;
+            align-items: center;
+            color: var(--Color-principal-textos, #36455D);
+            font-family: $font-main;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    }
+
+
+    .thirdStepButtonsContainer {
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+
+        .thirdStepButtons {
+            width: auto;
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    .nextButton {
+        padding: 10px 20px;
+        background: #A6D04F;
+        width: 66px;
+        cursor: pointer;
+        border-radius: 8px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .containerButtons {
+            width: auto;
+            display: flex;
+            justify-content: end;
+        }
+    
+        .nextButtonText {
+            color: #F3F3F3;
+            font-size: 18px;
+            font-family: $font-main;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+    }
+
+
+    .thirdStepHeader {
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        display: inline-flex;
+
+        .thirdStepTitle {
+            padding-left: 7px;
+            padding-right: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+
+            .thirdStepText {
+                text-align: center;
+
+                &.thirdStepRequired {
+                    color: #FF0B0B;
+                    font-size: 18px;
+                    font-family: $font-main;
+                    font-weight: 700;
+                    word-wrap: break-word;
+                }
+
+                &.thirdStepNormal {
+                    color: #36455D;
+                    font-size: 18px;
+                    font-family: $font-main;
+                    font-weight: 700;
+                    word-wrap: break-word;
+                }
+            }
+
+            .thirdStepDot {
+                width: 8px;
+                height: 8px;
+                position: relative;
+
+                .thirdStepInner {
+                    width: 6.67px;
+                    height: 6.67px;
+                    left: 0.67px;
+                    top: 0.67px;
+                    position: absolute;
+                    border: 0.67px #008289 solid;
+                }
+            }
+        }
+
+        .thirdStepButton {
+            padding-left: 10px;
+            padding-right: 10px;
+            justify-content: center;
+            align-items: normal;
+            gap: 10px;
+            display: flex;
+
+            .thirdStepIcon {
+                width: 16px;
+                height: 16px;
+                position: relative;
+
+                .thirdStepInner {
+                    width: 13.33px;
+                    height: 13.33px;
+                    left: 1.33px;
+                    top: 1.33px;
+                    position: absolute;
+                    border: 1.33px #A6D04F solid;
+                }
+            }
+
+            .thirdStepText {
+                color: #9197B3;
+                font-size: 14px;
+                font-family: $font-main;
+                font-weight: 600;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .thirdStepContent {
+        padding-left: 4px;
+        padding-right: 4px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+
+        .thirdStepHeader {
+            width: 1065px;
+            height: 52px;
+            position: relative;
+
+            .thirdStepBg {
+                width: 1065px;
+                height: 52px;
+                left: 0px;
+                top: 0px;
+                position: absolute;
+                background: #008289;
+                border-top-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+
+            .thirdStepArea {
+                width: 30.05px;
+                left: 836.60px;
+                top: 20px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-family: $font-main;
+                font-weight: 700;
+                word-wrap: break-word;
+            }
+
+            .thirdStepRole {
+                width: 141.11px;
+                left: 575.82px;
+                top: 20px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-family: $font-main;
+                font-weight: 700;
+                word-wrap: break-word;
+            }
+
+            .thirdStepName {
+                width: 52.78px;
+                left: 75.59px;
+                top: 20px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-family: $font-main;
+                font-weight: 700;
+                word-wrap: break-word;
+            }
+
+            .thirdStepEmail {
+                width: 33.39px;
+                left: 378.49px;
+                top: 20px;
+                position: absolute;
+                text-align: center;
+                color: white;
+                font-size: 14px;
+                font-family: $font-main;
+                font-weight: 700;
+                word-wrap: break-word;
+            }
+        }
+
+        .thirdStepRow {
+            width: 1058px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border-bottom: 0.50px #9197B3 solid;
+            justify-content: center;
+            align-items: center;
+            gap: 66px;
+            display: inline-flex;
+
+            .thirdStepName {
+                width: 230px;
+                height: 30px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+
+                .thirdStepText {
+                    flex: 1 1 0;
+                    color: #36455D;
+                    font-size: 16px;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    word-wrap: break-word;
+                }
+            }
+
+            .thirdStepEmail {
+                width: 230px;
+                height: 30px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+
+                .thirdStepText {
+                    flex: 1 1 0;
+                    color: #36455D;
+                    font-size: 16px;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    word-wrap: break-word;
+                }
+            }
+
+            .thirdStepRole {
+                width: 150px;
+                height: 30px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+
+                .thirdStepText {
+                    flex: 1 1 0;
+                    color: #36455D;
+                    font-size: 16px;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    word-wrap: break-word;
+                }
+            }
+
+            .thirdStepArea {
+                width: 150px;
+                height: 30px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                display: flex;
+
+                .thirdStepText {
+                    flex: 1 1 0;
+                    color: #36455D;
+                    font-size: 16px;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    word-wrap: break-word;
+                }
+            }
+
+            .thirdStepDropdown {
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 6px;
+                display: flex;
+
+                .thirdStepIcon {
+                    width: 18px;
+                    height: 18px;
+                    background: #D9D9D9;
+                    border-radius: 9999px;
+                }
+            }
+        }
+
+        .thirdStepDots {
+            height: 7px;
+            padding-top: 0.60px;
+            padding-bottom: 1.28px;
+            padding-left: 0.64px;
+            padding-right: 63.98px;
+            transform: rotate(90deg);
+            transform-origin: 0 0;
+            background: #FAFAFA;
+            box-shadow: 0px -0.6396867036819458px 0px #F0F0F0 inset;
+            justify-content: flex-start;
+            align-items: center;
+            display: inline-flex;
+
+            .thirdStepInner {
+                width: 125.38px;
+                align-self: stretch;
+                background: #C1C1C1;
+                border-radius: 2.56px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 6.40px;
+                display: inline-flex;
+
+                .thirdStepText {
+                    color: #C1C1C1;
+                    font-size: 2.56px;
+                    font-family: $font-main;
+                    font-weight: 400;
+                    word-wrap: break-word;
+                }
+            }
+        }
+    }
+}
+
+.loadingContainer{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
