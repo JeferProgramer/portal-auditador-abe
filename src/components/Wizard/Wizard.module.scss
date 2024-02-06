@@ -9,6 +9,9 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 8px;
+    min-height: 39vh;
+    max-height: 700px;
+    width: 50vw;
 
     .steps {
         display: inline-flex;
@@ -66,11 +69,12 @@
 
     .formFields {
         display: flex;
-        gap: 14px;
+        gap: 15px;
         width: 100%;
     }
 
     .form {
+        width: 100%;
         padding: 10px;
         border-radius: 8px;
         border: 0.5px solid #9197B3;
@@ -127,7 +131,7 @@
     .formInputText {
         flex: 1;
         color: #C7C7C7;
-        font-size: 14px;
+        font-size: 15px;
         font-family: $font-main;
         font-weight: 400;
         word-wrap: break-word;
@@ -158,7 +162,7 @@
     .selectText {
         flex: 1;
         color: #C7C7C7;
-        font-size: 14px;
+        font-size: 15px;
         font-family: $font-main;
         font-weight: 600;
         word-wrap: break-word;
@@ -196,7 +200,7 @@
     .datePickerText {
         flex: 1;
         color: #C7C7C7;
-        font-size: 14px;
+        font-size: 15px;
         font-family: $font-main;
         font-weight: 600;
         word-wrap: break-word;
@@ -243,7 +247,7 @@
     .descriptionText {
         flex: 1;
         color: #C7C7C7;
-        font-size: 14px;
+        font-size: 15px;
         font-family: $font-main;
         font-weight: 400;
         word-wrap: break-word;
@@ -252,6 +256,7 @@
     .nextButton {
         padding: 10px 20px;
         background: #A6D04F;
+        width: 66px;
         cursor: pointer;
         border-radius: 8px;
         display: inline-flex;
@@ -260,8 +265,8 @@
         gap: 10px;
     }
 
-    .containerButtons{
-        width: 100%;
+    .containerButtons {
+        width: auto;
         display: flex;
         justify-content: end;
     }
@@ -336,32 +341,176 @@
     .inputField {
         border-radius: 6px;
         border: 0.5px solid var(--inputs, #C7C7C7);
-        width: 97%;
-        height: 30px;
-        font-size: 14px;
+        width: 100%;
+        height: 39px;
+        font-size: 15px;
         padding-left: 10px;
-
+        color: #36455D;
 
         &:focus {
             outline: none;
         }
     }
 
+    .containerButtonsFather {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .containerSecond {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        justify-content: start;
+        align-items: start;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+
+        .textSecond {
+            color: #36455D;
+            font-size: 15px;
+            font-family: $font-main;
+            font-weight: 500;
+            word-wrap: break-word;
+        }
+
+        .addRequirementContainer {
+            cursor: pointer;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            display: inline-flex;
+        }
+
+        .addRequirementRelative {
+            width: 18px;
+            height: 18px;
+            position: relative;
+        }
+
+        .addRequirementAbsolute {
+            width: 15px;
+            height: 15px;
+            left: 1.50px;
+            top: 1.50px;
+            position: absolute;
+            border: 1.50px #A6D04F solid;
+        }
+
+        .addRequirementText {
+            color: #9197B3;
+            font-size: 18px;
+            font-family: $font-main;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+    }
+
+    .secondStepContainer {
+        min-height: 146px;
+        width: 100%;
+        max-height: 405px;
+        overflow-y: auto;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
+        display: inline-flex;
+
+        .secondStepInnerContainer {
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+            display: inline-flex;
+        }
+
+        .secondStepPadding1 {
+            padding: 10px;
+            padding-left: 0px;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+            width: 17.3vw;
+        }
+
+        .secondStepPadding2 {
+            padding: 10px;
+            padding-left: 0px;
+            justify-content: start;
+            align-items: center;
+            gap: 10px;
+            display: flex;
+            width: 26vw;
+        }
+
+        .secondStepText {
+            color: #36455D;
+            font-size: 15px;
+            font-family: $font-main;
+            font-weight: 700;
+            word-wrap: break-word;
+        }
+
+        .secondStepWidth {
+            width: 100%;
+            padding-bottom: 10px;
+            border-bottom: 0.50px #C7C7C7 dotted;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 60px;
+            display: inline-flex;
+        }
+
+        .secondStepHeight {
+            gap: 10px;
+            display: flex;
+            width: 26vw;
+        }
+
+        .secondStepFlex {
+            flex: 1 1 0;
+            color: #36455D;
+            font-size: 15px;
+            font-family: $font-main;
+            font-weight: 600;
+            word-wrap: break-word;
+        }
+
+        .secondStepRelative {
+            width: 18px;
+            height: 18px;
+            position: relative;
+        }
+
+        .secondStepAbsolute {
+            width: 15px;
+            height: 15px;
+            left: 1.50px;
+            top: 1.50px;
+            position: absolute;
+            border: 1.50px #9197B3 solid;
+        }
+    }
 }
-.selectContainerFirstStep{
-    height: 30px;   
+
+.selectContainerFirstStep {
+    height: 30px;
 
 }
 
-.projectContainerClass{
-    font-size: 16px;
+.projectContainerClass {
+    font-size: 16px !important;
 }
 
-.projectTitleClass{
+.projectTitleClass {
     margin-bottom: 0px !important;
 }
 
-.selectionBoxClass{
+.selectionBoxClass {
     height: 13px !important;
-    border: 0.5px solid  #C7C7C7 !important;
+    border: 0.5px solid #C7C7C7 !important;
 }

@@ -1,0 +1,40 @@
+@import "../../Variables/variables";
+
+@mixin important($styles-map) {
+  @each $property, $value in $styles-map {
+    #{$property}: $value !important;
+  }
+}
+
+.containerPeriodInput {
+  display: flex;
+  flex-direction: column;
+  .labelInput {
+    color: #0d0d2f;
+    font-size: 1.16869rem;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    font-family: $font-main;
+    line-height: normal;
+    padding-left: 0.625rem;
+  }
+  
+  .containerInput {
+    display: flex;
+    gap: 3.0625rem;
+  }
+  
+  .customInputCalendar {
+    width:190px;
+    border-radius: 0.375rem;
+    font-family: "Fuente Geometric";
+    font-size: 1.16869rem;
+  }
+
+  // .placeholder{
+  //   position: absolute;
+  //   top: 1rem;
+  //   left: 1rem;
+  // }
+}
+

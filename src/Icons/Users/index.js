@@ -1,14 +1,13 @@
 import * as React from "react"
-const Users = (props) => (
+const Users = ({stroke}) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width={18}
         height={18}
         fill="none"
-        {...props}
     >
         <path
-            stroke="#9197B3"
+            stroke={stroke}
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={1.5}

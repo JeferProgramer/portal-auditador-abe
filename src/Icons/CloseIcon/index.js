@@ -2,17 +2,17 @@ import * as React from "react";
 const CloseIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={14}
-    height={14}
-    fill="white"
+    width={18}
+    height={19}
+    fill="none"
     {...props}
   >
     <path
-      stroke="#36455D"
+      stroke="#9197B3"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={1.167}
-      d="m8.75 5.25-3.5 3.5m0-3.5 3.5 3.5M12.833 7A5.833 5.833 0 1 1 1.167 7a5.833 5.833 0 0 1 11.666 0Z"
+      strokeWidth={1.5}
+      d="m11.25 7.25-4.5 4.5m0-4.5 4.5 4.5M16.5 9.5a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"
     />
   </svg>
 );

@@ -35,7 +35,7 @@
 }
 
 .containerCheckHeader {
-  display:flex;
+  display: flex;
   border-bottom: 1px solid #ABABAB;
   justify-content: space-between;
   width: 100%;
@@ -48,7 +48,7 @@
 }
 
 .containerButtonsFooter {
-  margin-right: 40px;
+  font-family: $font-main !important;
   gap: 10px;
   display: flex;
   justify-content: center !important;

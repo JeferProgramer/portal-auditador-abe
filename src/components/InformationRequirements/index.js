@@ -10,6 +10,7 @@ import Menu from "@/Icons/Menu";
 import CalendarDate from "@/Icons/CalendarDate";
 import { getRequirements } from "@/services/RequirimientoInformacion.service";
 import { getProjectIdFromURL } from "@/helpers/idProject";
+import Loading from "../Loading";
 
 const InformationRequirements = () => {
   const [activeOption, setActiveOption] = useState(OPTIONS.LISTA);
@@ -79,6 +80,14 @@ const InformationRequirements = () => {
       </div>
     );
   };
+
+  if (data === null) {
+    return (
+      <div className={styles.containerLoading}>
+        <Loading size={"massive"} className={styles.customLoader} />
+      </div>
+    )
+  }
 
   return (
     <div className={styles.containerInformationGeneral}>

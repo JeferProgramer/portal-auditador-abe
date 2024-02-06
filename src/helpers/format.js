@@ -100,3 +100,11 @@ export const getUniqueList = (data, key) => {
         return { name: item[key], label: item[key] }
     });
 }
+
+export const formatOptions = (dataArray, labelKey, valueKey) => {
+    return dataArray.map(data => ({
+        label: data[labelKey],
+        value: data[valueKey]
+    }));
+};
+

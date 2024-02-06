@@ -1,6 +1,8 @@
 
+import WizardLayout from '@/Layouts/WizardLayout';
 import React, { useState } from 'react';
 import FirstStep from './FirstStep';
+import SecondStep from './SecondStep';
 import styles from './Wizard.module.scss'
 
 const Paso2 = ({ next, prev }) => (
@@ -18,22 +20,22 @@ const Paso3 = ({ prev }) => (
     </div>
 );
 
-const pasos = [FirstStep, Paso2, Paso3];
+const pasos = [FirstStep, SecondStep, Paso3];
 
 const Wizard = () => {
     const [pasoActual, setPasoActual] = useState(0);
-    const [visitaselected, setVisitaselected] = useState(null)
-
-    const handleChageVisit = (value) => {
-        setVisitaselected(value)
-    }
 
     const next = () => setPasoActual(Math.min(pasoActual + 1, pasos.length - 1));
     const prev = () => setPasoActual(Math.max(pasoActual - 1, 0));
 
     const PasoComponente = pasos[pasoActual];
 
-    return <PasoComponente next={next} prev={prev} handleChageVisit={handleChageVisit} />;
+    return (
+        <WizardLayout currentStep={pasoActual}>
+            <PasoComponente next={next} prev={prev} />
+        </WizardLayout>
+    );
 };
 
 export default Wizard;
+

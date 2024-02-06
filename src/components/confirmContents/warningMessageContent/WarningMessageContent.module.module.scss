@@ -1,0 +1,65 @@
+@import "../../../Variables/variables";
+
+
+.contentConfirmModal {
+  display: block;
+  width: 350px;
+  height: 235px;
+  padding: 1.5rem;
+  background: transparent;
+  font-family: $font-main;
+  color: var(--propuesta-color-principal, #0d0d2f);
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  .confirmButtonsContainer {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin: 35px 30px 0px 30px;
+
+    .cancelButtonConfirmModal {
+      color: #ABABAB;
+      font-family: $font-main;
+      border-radius: 6.4px;
+      border: 0.8px solid $color-cuaternary;
+      background-color: transparent;
+      width: 140.8px;
+      height: 32px;
+      font-size: 14.4px;
+      cursor: pointer;
+    }
+
+    .confirmButtonConfirmModal {
+      background-color: $color-tertiary;
+      color: #fff;
+      text-shadow: none;
+      background-image: none;
+      font-family: $font-main;
+      border-radius: 6.4px;
+      width: 140.8px;
+      height: 32px;
+      border: 0.8px solid transparent;
+      font-size: 14.4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.contentConfirmContentText {
+  margin-top: 20px;
+}
+
+.actions {
+  display: none !important;
+}
+
+.modalContentCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

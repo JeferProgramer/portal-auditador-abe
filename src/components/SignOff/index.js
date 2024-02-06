@@ -12,7 +12,7 @@ const SignOff = ({ setShowSignOff }) => {
           <div className={styles.signOffIconContainer}>
             <UserIcon />
           </div>
-          <div className={styles.signOffGreetingText} title={Jeferson}>
+          <div className={styles.signOffGreetingText} title={''}>
             <span className={styles.signOffGreetingHighlight}>¡</span>
             <span className={styles.signOffGreetingName}>Hola Jeferson</span>
             <span className={styles.signOffGreetingHighlight}>!</span>
@@ -21,15 +21,15 @@ const SignOff = ({ setShowSignOff }) => {
         <div className={styles.signOffDivider}></div>
         <div className={styles.signOffInfoContainer}>
           <div className={styles.signOffNameContainer}>
-            <div className={styles.signOffName}>{Jeferson}</div>
+            <div className={styles.signOffName}>{''}</div>
           </div>
           <div className={styles.signOffEmailContainer}>
-            <div className={styles.signOffEmail}>{Jeferson}</div>
+            <div className={styles.signOffEmail}>{''}</div>
           </div>
         </div>
       </div>
       <div className={styles.signOffButtonContainer}>
-        <div className={styles.signOffButton} onClick={handleSignOut}>
+        <div className={styles.signOffButton}>
           <div className={styles.signOffButtonText}>Cerrar Sesión</div>
         </div>
       </div>

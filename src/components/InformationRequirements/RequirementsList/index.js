@@ -9,6 +9,7 @@ import AdvancedFilters from "@/components/AdvancedFilters";
 import FilterTags from "@/components/FilterTags";
 import RequirementsTable from "./RequirementsTable";
 import { filterBySelection } from "@/helpers/filter";
+import CreateRequest from "@/components/CreateRequest";
 
 const RequirementsList = ({ data, viewsRender }) => {
   const [localdata, setLocaldata] = useState(data);
@@ -93,7 +94,7 @@ const RequirementsList = ({ data, viewsRender }) => {
             handleAccept={handleAccept}
           />
         </div>
-
+        <CreateRequest />
         {viewsRender()}
       </div>
       <FilterTags

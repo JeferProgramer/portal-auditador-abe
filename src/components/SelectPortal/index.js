@@ -25,10 +25,7 @@ const SelectPortal = ({ title, placeholder, options, handleChange, className, pr
         setIsListOpen(false);
       }
     };
-    // Agrega un event listener cuando el componente se monta
     document.addEventListener("mousedown", handleClickOutside);
-
-    // Limpia el event listener cuando el componente se desmonta
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
